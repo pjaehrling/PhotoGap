@@ -1,0 +1,293 @@
+body {
+	-webkit-touch-callout: none;	/* prevent callout to copy image, etc when tap to hold */
+  	-webkit-text-size-adjust: none;	/* prevent webkit from resizing text to fit */
+	-webkit-user-select: none;
+}   
+
+#log-image, #edit-image {
+	padding-top: 10px;
+    width  : 100%;
+    height : auto;
+}
+.cnt-bbl {
+	font-size: 10px;
+	font-weight: bold;
+	padding: 2px 5px 2px 5px;
+	float: right;
+}
+
+.popup.ui-popup {
+	color: white;
+	text-align: center;
+}
+.popup.error.ui-popup {
+	background: rgba(200,0,0,.8);
+}
+
+.popup.success.ui-popup {
+	background: rgba(0,200,0,.8);
+}
+
+.ui-popup-container.ui-popup-active {
+	top: 80% !important;
+	left: 10% !important;
+	width: 80% !important;
+}
+/*******************************************************************************
+ * Loader Overlay 
+ ******************************************************************************/
+.ui-loader-background {
+    width:100%;
+    height:100%;
+    top:0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display:none;
+    position: fixed;
+    z-index:100;
+}
+.ui-loading .ui-loader-background {
+    display:block;
+}
+
+/*******************************************************************************
+ * footer - nav - menu 
+ ******************************************************************************/
+[data-role="footer"] {
+	position: fixed; 
+	bottom: 0 !important;
+}
+
+[data-role="footer"] .ui-btn .ui-btn-inner { 
+	padding-top: 32px; 
+}
+[data-role="footer"] .ui-btn .ui-icon { 
+	width: 30px; 
+	height: 30px; 
+	margin-left: -15px ; 
+	-moz-box-shadow: none; 
+	-webkit-box-shadow: none; 
+	box-shadow: none;
+}
+.list-link .ui-icon { 
+	background: url(../img/list.png) 50% 50% no-repeat; 
+	background-size: 24px 22px; 
+}
+.map-link .ui-icon { 
+	background: url(../img/map.png) 50% 50% no-repeat; 
+	background-size: 24px 22px; 
+}
+.camera-link .ui-icon { 
+	background: url(../img/camera.png) 50% 50% no-repeat; 
+	background-size: 24px 22px; 
+}
+
+.list-link {
+	background: #38CB5D;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#38CB5D),to(#476F51));
+	background-image: -webkit-linear-gradient(#38CB5D,#476F51);
+	background-image: -moz-linear-gradient(#38CB5D,#476F51);
+	background-image: -ms-linear-gradient(#38CB5D,#476F51);
+	background-image: -o-linear-gradient(#38CB5D,#476F51);
+	background-image: linear-gradient(#38CB5D,#476F51);	
+}
+.camera-link {
+	background: #396b9e;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#396b9e),to(#1E2227));
+	background-image: -webkit-linear-gradient(#396b9e,#1E2227);
+	background-image: -moz-linear-gradient(#396b9e,#1E2227);
+	background-image: -ms-linear-gradient(#396b9e,#1E2227);
+	background-image: -o-linear-gradient(#396b9e,#1E2227);
+	background-image: linear-gradient(#396b9e,#1E2227);
+}
+
+#listpage > [data-role="header"] {
+	background: #38CB5D;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#476F51),to(#38CB5D));
+	background-image: -webkit-linear-gradient(#476F51,#38CB5D);
+	background-image: -moz-linear-gradient(#476F51,#38CB5D);
+	background-image: -ms-linear-gradient(#476F51,#38CB5D);
+	background-image: -o-linear-gradient(#476F51,#38CB5D);
+	background-image: linear-gradient(#476F51,#38CB5D);
+}
+#editpage > [data-role="header"] {
+	background: #396b9e;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#1E2227),to(#396b9e));
+	background-image: -webkit-linear-gradient(#1E2227,#396b9e);
+	background-image: -moz-linear-gradient(#1E2227,#396b9e);
+	background-image: -ms-linear-gradient(#1E2227,#396b9e);
+	background-image: -o-linear-gradient(#1E2227,#396b9e);
+	background-image: linear-gradient(#1E2227,#396b9e);
+}
+
+
+/*******************************************************************************
+ * jQueryMobile changes 
+ ******************************************************************************/
+ul.ui-grid-a {
+	width: 100%;
+	border-top: 1px solid #111;
+}
+.ui-grid-a>:nth-child(n) {
+	margin-right: 0px;
+}
+.ui-content {
+	padding-top: 0px;
+}
+[data-role="collapsible-set"] {
+	margin-top: 0px;
+}
+.ui-collapsible-heading .ui-btn-icon-left .ui-btn-inner {
+	background-image: linear-gradient(#ddd,#bbb);
+}
+.ui-footer {
+	border: 0px;
+}
+.ui-field-contain > div.ui-input-text ,.ui-field-contain > textarea.ui-input-text {
+	margin-bottom: 10px;
+}
+
+.ui-field-contain .ui-corner-all {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.ui-li .ui-btn-inner a.ui-link-inherit {
+	padding-top: .2em;
+	padding-bottom: .2em;
+}
+.ui-li-aside {
+	width: 50px;
+}
+
+
+/*******************************************************************************
+ * Transitions from jQtouch (with small modifications): http://www.jqtouch.com/ 
+ * Built by David Kaneda and maintained by Jonathan Stark.
+ ******************************************************************************/
+.in, .out {
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-duration: 150ms;
+}
+.myslide.out {
+	-webkit-transform: translateX(-100%);
+	-webkit-animation-name: myslideouttoleft;
+}
+
+.myslide.in {
+	-webkit-transform: translateX(0);
+	-webkit-animation-name: myslideinfromright;
+}
+
+.myslide.out.reverse {
+	-webkit-transform: translateX(100%);
+	-webkit-animation-name: myslideouttoright;
+}
+
+.myslide.in.reverse {
+	-webkit-transform: translateX(0);
+	-webkit-animation-name: myslideinfromleft;
+}
+
+.myslideup.out {
+	-webkit-animation-name: dontmove;
+	z-index: 0;
+}
+
+.myslideup.in {
+	-webkit-transform: translateY(0);
+	-webkit-animation-name: myslideinfrombottom;
+	z-index: 10;
+}
+
+.myslideup.in.reverse {
+	z-index: 0;
+	-webkit-animation-name: dontmove;
+}
+
+.myslideup.out.reverse {
+	-webkit-transform: translateY(100%);
+	z-index: 10;
+	-webkit-animation-name: myslideouttobottom;
+}
+
+.myslidedown.out {
+	-webkit-animation-name: dontmove;
+	z-index: 0;
+}
+
+.myslidedown.in {
+	-webkit-transform: translateY(0);
+	-webkit-animation-name: myslideinfromtop;
+	z-index: 10;
+}
+
+.mymyslidedown.in.reverse {
+	z-index: 0;
+	-webkit-animation-name: dontmove;
+}
+
+.myslidedown.out.reverse {
+	-webkit-transform: translateY(-100%);
+	z-index: 10;
+	-webkit-animation-name: myslideouttotop;
+}
+
+@-webkit-keyframes myslideinfromright {
+	from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes myslideinfromleft {
+    from { -webkit-transform: translateX(-100%); }
+    to { -webkit-transform: translateX(0); }
+}
+
+@-webkit-keyframes myslideouttoleft {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes myslideouttoright {
+    from { -webkit-transform: translateX(0); }
+    to { -webkit-transform: translateX(100%); }
+}
+
+@-webkit-keyframes myslideinfromtop {
+    from { -webkit-transform: translateY(-100%); }
+    to { -webkit-transform: translateY(0); }
+}
+
+@-webkit-keyframes myslideinfrombottom {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(0); }
+}
+
+@-webkit-keyframes myslideouttobottom {
+    from { -webkit-transform: translateY(0); }
+    to { -webkit-transform: translateY(100%); }
+}
+
+@-webkit-keyframes myslideouttotop {
+    from { -webkit-transform: translateY(0); }
+    to { -webkit-transform: translateY(-100%); }
+}
+@-webkit-keyframes myfadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes myfadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.myfade.out {
+	z-index: 0;
+	-webkit-animation-name: myfadeout;
+}
+
+.myfade.in {
+	opacity: 1;
+	z-index: 10;
+	-webkit-animation-name: myfadein;
+}
